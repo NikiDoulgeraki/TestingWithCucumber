@@ -7,17 +7,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import pages.CheckAvailabilityPage;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 public class CheckIn_Steps extends BaseUtil {
@@ -39,7 +32,6 @@ public class CheckIn_Steps extends BaseUtil {
     public void iClickOnLocationMenu(String Location) {
         //Location
         System.out.println("Clicking on location");
-        /*CheckAvailabilityPage page = new CheckAvailabilityPage(base.Driver);*/
         element = base.Driver.findElement(By.id("txtsearch"));
         String js = "arguments[0].type='visible';";
         ((JavascriptExecutor) base.Driver).executeScript(js, element);
